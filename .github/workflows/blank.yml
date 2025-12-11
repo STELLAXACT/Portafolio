@@ -20,4 +20,11 @@ jobs:
         env:
           DISCORD_WEBHOOK: "https://discord.com/api/webhooks/1448769681635672229/ZRj2-qTd5dLP8IKGH5mTeNqxtvwmCfYa2LME2BlD5ASEPmDYQV7_geBs1JbkG0p2TOos"
         with:
-          args: " ${{ github.repository_name }} Se hizo un push o PR en el repositorio 🚀 "
+          args: |
+            🔔 **Nueva actualización en el repositorio**
+            
+            📦 **Repositorio:** `${{ github.repository }}`
+            🌿 **Rama:** `${{ github.ref_name }}`
+            👤 **Autor:** `${{ github.actor }}`
+            📝 **Commit:** `${{ github.event.head_commit.message }}`
+            🔗 **URL del commit:** ${{ github.event.head_commit.url }}
