@@ -1,31 +1,36 @@
-# This is a basic workflow to help you get started with Actions
-
 name: CI
 
-# Controls when the workflow will run
 on:
-  # Triggers the workflow on push or pull request events but only for the "main" branch
   push:
-    branches: [ "main" ,"feature/*"]
+    branches: [ "main", "feature/*" ]
   pull_request:
-    branches: [ "main" ,"feature/*"]
-
-  # Allows you to run this workflow manually from the Actions tab
+    branches: [ "main", "feature/*" ]
   workflow_dispatch:
 
-# A workflow run is made up of one or more jobs that can run sequentially or in parallel
 jobs:
-  # The workflow job name
   discord-notifier:
-    # Name of the enviroment
-    environment: secrets
-    # The type of runner that the job will run on
     runs-on: ubuntu-latest
-    # Sequence of tasks
+
     steps:
+      - name: Checkout repository
+        uses: actions/checkout@v3
+
+      - name: Set up Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: '3.11'
+
+      - name: Install dependencies (if requirements.txt exists)
+        run: |
+          if [ -f "requirements.txt" ]; then
+            pip install -r requirements.txt
+          elif [ -f "src/requirements.txt" ]; then
+            pip install -r src/requirements.txt
+          else
+            echo "No requirements.txt found. Skipping."
+          fi
+
       - name: Discord Notification
         uses: tenzin1308/discord-notification@v1.0.0
         with:
-          discord-webhook-url: "https://discord.com/api/webhooks/1448769681635672229/ZRj2-qTd5dLP8IKGH5mTeNqxtvwmCfYa2LME2BlD5ASEPmDYQV7_geBs1JbkG0p2TOos"
-
-      
+          discord-webhook-url: ${{ secrets.DISCORD_WEBHOOK }}
