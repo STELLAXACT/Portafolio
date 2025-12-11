@@ -26,6 +26,6 @@ jobs:
       - name: Discord Notification
         uses: tenzin1308/discord-notification@v1.0.0
         with:
-          discord-webhook-url: "https://discord.com/api/webhooks/1448769681635672229/ZRj2-qTd5dLP8IKGH5mTeNqxtvwmCfYa2LME2BlD5ASEPmDYQV7_geBs1JbkG0p2TOos
+          discord-webhook-url: "https://discord.com/api/webhooks/1448769681635672229/ZRj2-qTd5dLP8IKGH5mTeNqxtvwmCfYa2LME2BlD5ASEPmDYQV7_geBs1JbkG0p2TOos"
 
       
