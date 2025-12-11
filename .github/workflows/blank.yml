@@ -15,22 +15,9 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v3
 
-      - name: Set up Python
-        uses: actions/setup-python@v4
+      - name: Send Discord Notification
+        uses: Ilshidur/action-discord@master
+        env:
+          DISCORD_WEBHOOK: "https://discord.com/api/webhooks/1448769681635672229/ZRj2-qTd5dLP8IKGH5mTeNqxtvwmCfYa2LME2BlD5ASEPmDYQV7_geBs1JbkG0p2TOos"
         with:
-          python-version: '3.11'
-
-      - name: Install dependencies (if requirements.txt exists)
-        run: |
-          if [ -f "requirements.txt" ]; then
-            pip install -r requirements.txt
-          elif [ -f "src/requirements.txt" ]; then
-            pip install -r src/requirements.txt
-          else
-            echo "No requirements.txt found. Skipping."
-          fi
-
-      - name: Discord Notification
-        uses: tenzin1308/discord-notification@v1.0.0
-        with:
-          discord-webhook-url: ${{ secrets.DISCORD_WEBHOOK }}
+          args: "Se hizo un push o PR en el repositorio 🚀"
