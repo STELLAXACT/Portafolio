@@ -1,0 +1,34 @@
+:root {
+  --background-grid-color: rgba(28, 168, 161, 0.212);
+  --background-fill-color: #000;
+}
+
+html, body {
+  width: 40;
+  height: 40;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+}
+
+body {
+  /* Vertical lines */
+  background-color: var(--background-fill-color);
+  background-image:
+    repeating-linear-gradient(
+      to right,
+      var(--background-grid-color) 0,
+      var(--background-grid-color) 0px,
+      transparent 1px,
+      transparent 100px
+    ),
+    repeating-linear-gradient(
+      to bottom,
+      var(--background-grid-color) 0,
+      var(--background-grid-color) 1px,
+      transparent 1px,
+      transparent 200px
+    )
+  ;
+  background-position: 00p 0, 0 0;
+}

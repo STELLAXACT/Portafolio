@@ -1,0 +1,127 @@
+*{
+    font-family: poppins, sans-serif;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    
+}
+:root {
+  --bg-main: #0b0f14;
+  --bg-sidebar: #0e141b;
+  --bg-hover: rgba(0, 255, 200, 0.08);
+  --accent: #00f5c8;
+  --text-main: #e5e7eb;
+  --text-muted: #ffffff;
+  --border-soft: rgba(255, 255, 255, 0.05);
+  
+}  
+
+
+.menu {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 240px;
+  height: 100vh;
+  background: linear-gradient(
+    180deg,
+    #0b0f14 0%,
+    #0e141b 100%
+  );
+  border-right: 1px solid var(--border-soft);
+  padding: 24px 16px;
+  font-family: "Inter", system-ui, sans-serif;
+}
+
+
+.barraLateral {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+
+.menu_lista {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+
+.menu_lista li {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 10px 12px;
+  margin-bottom: 6px;
+  border-radius: 10px;
+  color: var(--text-muted);
+  font-size: 14px;
+  cursor: pointer;
+  transition: all 0.25s ease;
+}
+
+
+.menu_lista li:first-child {
+  font-weight: 600;
+  color: var(--text-main);
+  margin-bottom: 20px;
+  cursor: default;
+}
+
+
+.menu_lista li a {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  width: 100%;
+  text-decoration: none;
+  color: inherit;
+}
+
+
+.menu_lista img {
+  width: 16px;
+  height: 16px;
+  filter: brightness(0.9);
+}
+
+
+.menu_lista li:hover:not(:first-child) {
+  background: var(--bg-hover);
+  color: var(--accent);
+  box-shadow: inset 0 0 0 1px rgba(0, 245, 200, 0.15);
+}
+
+
+.menu_lista li.active {
+  background: rgba(0, 245, 200, 0.12);
+  color: var(--accent);
+  box-shadow: 0 0 12px rgba(0, 245, 200, 0.25);
+}
+
+
+.menu {
+  overflow-y: auto;
+}
+
+.menu::-webkit-scrollbar {
+  width: 6px;
+}
+
+.menu::-webkit-scrollbar-thumb {
+  background: rgba(255, 255, 255, 0.08);
+  border-radius: 10px;
+}
+
+.menu_lista img {
+  filter: invert(68%) sepia(78%) saturate(450%)
+          hue-rotate(125deg) brightness(95%) contrast(90%);
+}
+
+.colombia img {
+  filter: invert(1%) sepia(0%) saturate(100%) 
+          hue-rotate(0deg) brightness(100%) contrast(100%);
+}
+
+
