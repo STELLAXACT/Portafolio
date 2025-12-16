@@ -4,10 +4,10 @@
 }
 
 html, body {
-  width: 40;
-  height: 40;
-  margin: 0;
-  padding: 0;
+  width: 40px;
+  height: 40px;
+  margin: 0px;
+  padding: 0px;
   overflow: hidden;
 }
 
