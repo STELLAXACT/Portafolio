@@ -47,6 +47,15 @@
 .presentacion h2{
     color: aqua;
 }
+.presentacion button{
+    background-color: aqua;
+    color: black;
+    font-weight: bold;
+    border: none;
+    padding: 10px;
+    border-radius: 20px;
+    cursor: pointer;
+}
 
 
     
