@@ -1,0 +1,87 @@
+
+.Pagina_princiapal {
+  margin-left: 240px;
+  padding: 32px;
+
+
+  display: grid;
+  gap: 80px;
+
+
+  grid-template-columns: repeat(12, 1fr);
+  grid-auto-rows: 180px;
+
+  border-radius: 24px;
+  border: 1px solid var(--glass-border);
+
+  color: var(--text-main);
+}
+
+
+.Pagina_princiapal section {
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: 10px;
+  padding: 15px;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.Pagina_princiapal section:hover {
+  transform: translateY(-2px);
+  border-color: rgba(0, 245, 200, 0.35);
+  box-shadow: 0 12px 32px rgba(0, 245, 200, 0.12);
+}
+
+
+
+
+.presentacion {
+  grid-column: 1 / span 10;
+  grid-row: span 2;
+    
+}
+
+.presentacion h2{
+    color: aqua;
+}
+
+
+    
+
+
+.Sistema_metrico_api {
+  grid-column: 9 / span 4;
+  grid-row: span 1;
+}
+
+
+.Status {
+  grid-column: 9 / span 4;
+  grid-row: span 1;
+}
+
+
+.Ultimo_Proyecto {
+  grid-column: 1 / span 4;
+  grid-row: span 1;
+}
+
+
+.Habilidades {
+  grid-column: 5 / span 4;
+  grid-row: span 1;
+}
+
+
+.Contacto {
+  grid-column: 9 / span 4;
+  grid-row: span 1;
+}
+
+.Ultima_actividad_api {
+  grid-column: 1 / span 12;
+  grid-row: span 1;
+}

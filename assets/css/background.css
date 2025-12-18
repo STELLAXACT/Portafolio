@@ -3,12 +3,12 @@
   --background-fill-color: #000;
 }
 
-html, body {
+html, body::before {
   width: 40px;
   height: 40px;
-  margin: 0px;
-  padding: 0px;
-  overflow: hidden;
+  margin: 0;
+  padding: 0;
+  overflow: hidden; 
 }
 
 body {
@@ -32,3 +32,4 @@ body {
   ;
   background-position: 00p 0, 0 0;
 }
+
