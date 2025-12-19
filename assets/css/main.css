@@ -1,14 +1,11 @@
-
 .Pagina_princiapal {
   margin-left: 240px;
   padding: 32px;
 
-
   display: grid;
-  gap: 80px;
+  gap: 32px;
 
-
-  grid-template-columns: repeat(12, 1fr);
+  grid-template-columns: repeat(24, fr);
   grid-auto-rows: 180px;
 
   border-radius: 24px;
@@ -21,12 +18,14 @@
 .Pagina_princiapal section {
   background: rgba(255, 255, 255, 0.03);
   border: 1px solid rgba(255, 255, 255, 0.12);
-  border-radius: 10px;
-  padding: 15px;
+  border-radius: 16px;
+  padding: 20px;
 
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+
+  transition: all 0.25s ease;
 }
 
 .Pagina_princiapal section:hover {
@@ -39,58 +38,57 @@
 
 
 .presentacion {
-  grid-column: 1 / span 10;
-  grid-row: span 2;
-    
+  grid-column: 1 / span 24;   
+  grid-row: 1 / span 2;      
 }
 
-.presentacion h2{
-    color: aqua;
-}
-.presentacion button{
-    background-color: aqua;
-    color: black;
-    font-weight: bold;
-    border: none;
-    padding: 10px;
-    border-radius: 20px;
-    cursor: pointer;
+.presentacion h2 {
+  color: aqua;
 }
 
-
-    
+.presentacion button {
+  background-color: aqua;
+  color: black;
+  font-weight: bold;
+  border: none;
+  padding: 10px 16px;
+  border-radius: 20px;
+  cursor: pointer;
+}
 
 
 .Sistema_metrico_api {
-  grid-column: 9 / span 4;
-  grid-row: span 1;
-}
-
-
-.Status {
-  grid-column: 9 / span 4;
-  grid-row: span 1;
-}
-
-
-.Ultimo_Proyecto {
-  grid-column: 1 / span 4;
-  grid-row: span 1;
-}
-
-
-.Habilidades {
-  grid-column: 5 / span 4;
-  grid-row: span 1;
+  grid-column: 25 / span 20;   
+  grid-row: 1 / span 1;
 }
 
 
 .Contacto {
-  grid-column: 9 / span 4;
-  grid-row: span 1;
+  grid-column: 25 / span 20;
+  grid-row: 2 / span 1;
 }
 
-.Ultima_actividad_api {
-  grid-column: 1 / span 12;
-  grid-row: span 1;
+
+.Habilidades {
+  grid-column: 25 / span 20;
+  grid-row: 3 / span 1;
 }
+
+
+.Ultimo_Proyecto_api {
+  grid-column: 1 / span 16;
+  grid-row: 3 / span 1;
+}
+
+
+.Status {
+  grid-column: 17 / span 8;
+  grid-row: 3 / span 1;
+}
+
+
+.Ultima_actividad_api {
+  grid-column: 1 / span 24;
+  grid-row: 4 / span 1;
+}
+
